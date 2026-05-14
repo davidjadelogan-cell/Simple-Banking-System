@@ -86,7 +86,9 @@ while is_running:
 
     elif action == 3:
         is_running = False
+        print("********************************")
         print("Thank you for using Dracco Bank")
+        print("********************************")
     
     else:
         print("invalid input,\n please select a valid input")
