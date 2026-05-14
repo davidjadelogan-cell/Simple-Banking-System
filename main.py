@@ -1,7 +1,11 @@
 import os
 
-def deposit(balance, amount):
-    amount = float(input("Enter the amount you want to deposit: "))
+def deposit(amount):
+    try:
+        amount = float(input("Enter the amount you want to deposit: "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return 0
     
     if amount <= 0:
         print("invalid amount")
@@ -10,13 +14,18 @@ def deposit(balance, amount):
         return amount
 
 
-def withdraw(amount):
-    amount = float(input("Enter the amount you want to withdraw: "))
+def withdraw(balance,amount):
+    try:
+        amount = float(input("Enter the amount you want to deposit: "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return 0
+
     if amount > balance:
         print("insufficent funds")
         return 0
     elif amount <= 0:
-        print("Invalid Input")
+        print("Invalid Amount")
         return 0
     else: 
         return amount
