@@ -10,10 +10,13 @@ def deposit(balance, amount):
         return amount
 
 
-def withdraw(balance, amount):
+def withdraw(amount):
     amount = float(input("Enter the amount you want to withdraw: "))
     if amount > balance:
         print("insufficent funds")
+        return 0
+    elif amount <= 0:
+        print("Invalid Input")
         return 0
     else: 
         return amount
