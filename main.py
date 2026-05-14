@@ -71,7 +71,7 @@ while is_running:
         continue
 
     if action == 1:
-        deposited = deposit(balance, 0)
+        deposited = deposit(0)
         balance += deposited
         current_balance = balance
         transactions.append(("Deposit", deposited))
